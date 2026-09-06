@@ -1,0 +1,258 @@
+<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="初始化 Hugo 个人博客并进行本地自动化部署"><title>Hugo 初始化</title><link rel=canonical href=http://BackLight416491.github.io/p/hugo-init/><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"><link rel=stylesheet href=/scss/style.min.e00a944e9fee6abec20388c3ba99c56604ef62a3206e04aa2cf0813a523aec21.css><meta property='og:title' content="Hugo 初始化"><meta property='og:description' content="初始化 Hugo 个人博客并进行本地自动化部署"><meta property='og:url' content='http://BackLight416491.github.io/p/hugo-init/'><meta property='og:site_name' content='逆光的个人博客'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='Hugo'><meta property='article:published_time' content='2026-09-06T00:00:00+00:00'><meta property='article:modified_time' content='2026-09-06T00:00:00+00:00'><meta property='og:image' content='http://BackLight416491.github.io/p/hugo-init/hugo-logo-wide.svg'><meta name=twitter:title content="Hugo 初始化"><meta name=twitter:description content="初始化 Hugo 个人博客并进行本地自动化部署"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content='http://BackLight416491.github.io/p/hugo-init/hugo-logo-wide.svg'><link rel="shortcut icon" href=/img/favicon.ico><script src=/particles.js/particles.min.js></script><div id=particles-js></div><div id=particles-mouse-tracker></div><script>function getParticleColors(){const t=document.documentElement,e=getComputedStyle(t);return{color:e.getPropertyValue("--particle-color").trim()||"#2196F3",lineColor:e.getPropertyValue("--particle-line-color").trim()||"#2196F3"}}function initParticles(){const e=getParticleColors();window.pJSDom&&window.pJSDom.length>0&&(window.pJSDom[0].pJS.fn.vendors.destroypJS(),window.pJSDom=[]),particlesJS("particles-js",{particles:{number:{value:60,density:{enable:!0,value_area:800}},color:{value:e.color},shape:{type:"circle"},opacity:{value:.6,random:!1},size:{value:3,random:!0},line_linked:{enable:!0,distance:150,color:e.lineColor,opacity:.4,width:1},move:{enable:!0,speed:4,direction:"none",random:!1,straight:!1,out_mode:"out"}},interactivity:{detect_on:"canvas",events:{onhover:{enable:!0,mode:"grab"}},modes:{grab:{distance:180,line_linked:{opacity:.5}}}},retina_detect:!0})}document.addEventListener("DOMContentLoaded",initParticles);const observer=new MutationObserver(function(e){e.forEach(function(e){e.type==="attributes"&&e.attributeName==="data-scheme"&&setTimeout(initParticles,100)})}),targetNode=document.documentElement;observer.observe(targetNode,{attributes:!0})</script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar.jpg width=699 height=699 class=site-logo loading=lazy alt=Avatar>
+</a><span class=emoji>🔋</span></figure><div class=site-meta><h1 class=site-name><a href=/>逆光的个人博客</a></h1><h2 class=site-description>欢迎来到我的个人博客！</h2></div></header><ol class=menu-social><li><a href=https://space.bilibili.com/1454605895 title=BiliBili rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 014-4h10a4 4 0 014 4v6a4 4 0 01-4 4H7a4 4 0 01-4-4v-6"/><path d="M8 3l2 3"/><path d="M16 3l-2 3"/><path d="M9 13v-2"/><path d="M15 11v2"/></svg></a></li><li><a href=https://github.com/BackLight416491 title=GitHub rel=me><svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=https://twitter.com title=Twitter rel=me><svg class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>主页</span></a></li><li><a href=/%E5%85%B3%E4%BA%8E/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>关于</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>归档</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>搜索</span></a></li><li><a href=/%E5%8F%8B%E9%93%BE/><svg class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>友链</span></a></li><li class=menu-bottom-section><ol class=menu><li id=i18n-switch><svg class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7"/><path d="M9 3v2c0 4.418-2.239 8-5 8"/><path d="M5 9c-.003 2.144 2.952 3.908 6.7 4"/><path d="M12 20l4-9 4 9"/><path d="M19.1 18h-6.2"/></svg>
+<select name=language title=language onchange="window.location.href=this.selectedOptions[0].value"><option value=/en/>English</option><option value=/p/hugo-init/ selected>简体中文</option></select></li><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>Dark Mode</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">Table of contents</h2><div class=widget--toc><nav class=toc-nav id=TableOfContents><ol><li><a href=#本地初始化hugo>本地初始化Hugo</a><ol><li><a href=#前提条件>前提条件</a></li><li><a href=#初始化命令>初始化命令</a></li><li><a href=#本地构建>本地构建</a></li></ol></li><li><a href=#主题>主题</a><ol><li><a href=#复制模板内容>复制模板内容</a></li><li><a href=#编辑文章>编辑文章</a></li><li><a href=#自定义>自定义</a><ol><li><a href=#评论功能>评论功能</a></li><li><a href=#粒子背景>粒子背景</a></li></ol></li></ol></li><li><a href=#本地自动推送更新>本地自动推送更新</a><ol><li><ol><li><a href=#自动推送>自动推送</a></li></ol></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/p/hugo-init/><img alt="Featured image of post Hugo 初始化" loading=lazy sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src=/p/hugo-init/hugo-logo-wide.svg></a></div><div class=article-details><header class=article-category><a href=/categories/others/ style=background-color:#2a9d8f;color:#fff>其它</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/hugo-init/>Hugo 初始化</a></h2><h3 class=article-subtitle>初始化 Hugo 个人博客并进行本地自动化部署</h3></div><footer class=article-meta><div class=inline-meta><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published datetime=2026-09-06T00:00:00Z>2026-09-06</time>
+<svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>7 minutes read</time></div></footer></div></header><aside class=article-toc><details><summary><div class=article-toc-title><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6-6 6"/></svg>
+<span>Table of contents</span></div></summary><nav class=toc-nav><ol><li><a href=#本地初始化hugo>本地初始化Hugo</a><ol><li><a href=#前提条件>前提条件</a></li><li><a href=#初始化命令>初始化命令</a></li><li><a href=#本地构建>本地构建</a></li></ol></li><li><a href=#主题>主题</a><ol><li><a href=#复制模板内容>复制模板内容</a></li><li><a href=#编辑文章>编辑文章</a></li><li><a href=#自定义>自定义</a><ol><li><a href=#评论功能>评论功能</a></li><li><a href=#粒子背景>粒子背景</a></li></ol></li></ol></li><li><a href=#本地自动推送更新>本地自动推送更新</a><ol><li><ol><li><a href=#自动推送>自动推送</a></li></ol></li></ol></li></ol></nav></details></aside><section class=article-content><p>这里是基于我自己的博客构建经历编辑的部署教程，本地部署和主题配置详情见 <a class=link href=https://hugo.opendocs.io/getting-started/quick-start/ target=_blank rel=noopener>Hugo</a> 和 <a class=link href=https://stack.cai.im/zh/ target=_blank rel=noopener>stack</a> 主题官方网站。如果对于本地自动化推送之前的步骤有疑问请参考官方文档。</p><h2 id=本地初始化hugo>本地初始化Hugo</h2><p>本地初始化主要分为三步，创建hugo博客项目，安装主题，本地运行。</p><h3 id=前提条件>前提条件</h3><p>需要提前安装好 Hugo 和 Git。对于部分 Windows，需要安装好 power shell。</p><blockquote class="alert alert-note"><div class=alert-header><span class=alert-icon>📝</span>
+<span class=alert-title>Note</span></div><div class=alert-body><p>power shell 和 Windows power shell，cmd是不同的。你可以在Windows自带的商店中下载到power shell，相关命令为pwsh。</p></div></blockquote><blockquote class="alert alert-tip"><div class=alert-header><span class=alert-icon>💡</span>
+<span class=alert-title>Tip</span></div><div class=alert-body><p>对于 Windows，Hugo可以使用 winget 进行安装，这样可以自动配置好环境变量并且有利于自动更新程序。</p></div></blockquote><h3 id=初始化命令>初始化命令</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=c># quickstart 可以换为绝对路径。如果是使用winget等方式部署的hugo，推荐填写绝对路径，以免不知道项目的位置。</span>
+</span></span><span class=line><span class=cl><span class=c># --format yaml 为可选项。hugo支持yaml 和 toml 格式的配置文件。而且并不是你在这里选定了一种格式就无法使用另一种格式了。</span>
+</span></span><span class=line><span class=cl><span class=c># 它只影响项目生产时的默认配置文件格式。</span>
+</span></span><span class=line><span class=cl><span class=n>hugo</span> <span class=n>new</span> <span class=n>site</span> <span class=n>quickstart</span> <span class=p>-</span><span class=n>-format</span> <span class=n>yaml</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># 进入项目文件夹</span>
+</span></span><span class=line><span class=cl><span class=nb>cd </span><span class=n>quickstart</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># 初始化 git</span>
+</span></span><span class=line><span class=cl><span class=n>git</span> <span class=n>init</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># 将需要的主题作为 git 子模块加入到项目中。</span>
+</span></span><span class=line><span class=cl><span class=c># 我使用的是 stack 主题，命令如下：</span>
+</span></span><span class=line><span class=cl><span class=c># git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack</span>
+</span></span><span class=line><span class=cl><span class=n>git</span> <span class=n>submodule</span> <span class=n>add</span> <span class=n>https</span><span class=err>:</span><span class=p>//</span><span class=n>github</span><span class=p>.</span><span class=n>com</span><span class=p>/</span><span class=n>theNewDynamic</span><span class=p>/</span><span class=nb>gohugo-theme</span><span class=n>-ananke</span><span class=p>.</span><span class=py>git</span> <span class=n>themes</span><span class=p>/</span><span class=n>ananke</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># 将你下载的主题选作为使用主题</span>
+</span></span><span class=line><span class=cl><span class=c># 如果你之前选择了 yaml 格式，这里命令就要改成：</span>
+</span></span><span class=line><span class=cl><span class=c># echo &#34;theme: ananke&#34; &gt;&gt; hugo.yaml</span>
+</span></span><span class=line><span class=cl><span class=nb>echo </span><span class=s2>&#34;theme = &#39;ananke&#39;&#34;</span> <span class=p>&gt;&gt;</span> <span class=n>hugo</span><span class=p>.</span><span class=py>toml</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># 社会启动 hugo，在你的本地生成一个静态页面博客，如果没有报错就表明没有问题，项目初始化完成，ctrl + c 关闭即可。</span>
+</span></span><span class=line><span class=cl><span class=c># 页面没有元素属于正常现象，出现页面错误请按照官方文档自行排查</span>
+</span></span><span class=line><span class=cl><span class=n>hugo</span> <span class=n>server</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=本地构建>本地构建</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># 再次启动，这次暂时不要关停hugo</span>
+</span></span><span class=line><span class=cl><span class=n>hugo</span> <span class=n>server</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># 启动另一个pwsh页面，在项目根目录下运行这个命令。</span>
+</span></span><span class=line><span class=cl><span class=c># 这个命令是用于创建一篇新的文章的。</span>
+</span></span><span class=line><span class=cl><span class=c># 对于 stack 主题而言，你可以直接在文件管理器，vscode 中进行，在./content/post文件夹下创建新的 md文件，这和这条命令的区别不大。</span>
+</span></span><span class=line><span class=cl><span class=n>hugo</span> <span class=n>new</span> <span class=n>content</span><span class=p>/</span><span class=n>posts</span><span class=p>/</span><span class=nb>my-first</span><span class=n>-post</span><span class=p>.</span><span class=nb>md
+</span></span></span></code></pre></td></tr></table></div></div><p>在生成的 md文件开头配置这些信息：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=cl><span class=nn>---</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;我的第一篇文章&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=nt>date</span><span class=p>:</span><span class=w> </span><span class=ld>2022-11-20T09:03:20</span><span class=m>-08</span><span class=p>:</span><span class=m>00</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=nt>draft</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=nn>---</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><p>保存好之后，检查本地博客页面，就会发现这篇博客被加载到了网页上。</p><h2 id=主题>主题</h2><p>完成上面的步骤后，页面的情况大概率是什么都没有的。现在，进入下载好的 stack 主题文件夹下的 demo 文件夹（themes\hugo-theme-stack\demo）。
+里面是需要的模板文件，将其复制到根目录对应的文件夹下。</p><h3 id=复制模板内容>复制模板内容</h3><p>这里文件夹对应的内容如下：</p><ul><li>assets: 资源文件，主题需要使用的资源会放置到这里。比如头像，主页头像下方的那几个个人账号链接的图标<ul><li>需要注意的是还有一个static文件夹也是用于存储一些不变资源。这里要注意区分。</li></ul></li><li>config: 配置文件，根目录下没有config文件夹，但是 hugo 可能扫描到这里的配置。其中的 hugo.toml（26年版本） 文件请放到根目录。</li><li>content: 资源文件，存放文章资源和一些比较重要的格式的资源。包括主页侧边栏，个人页面，归档文字等等。</li></ul><p>复制过来的 hugo.toml 请删除 以下配置：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=p>[[</span><span class=nx>module</span><span class=p>.</span><span class=nx>imports</span><span class=p>]]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>path</span> <span class=p>=</span> <span class=s2>&#34;github.com/CaiJimmy/hugo-theme-stack/v3&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><p>并确保 根目录和 config 文件夹中只有一个 hugo.toml 文件。</p><p>这些完成后，再次运行 hugo server，应该就能在网页上看到该主题 的完整内容了。</p><h3 id=编辑文章>编辑文章</h3><p>你可以在 content/post中管理文章。建议每篇文章都创建一个文件夹保存，方便管理（可以将该文章需要使用的图片等内容一并打包到该文件夹下）。
+hugo 可以识别多级的文件夹：</p><p><img alt="图片 1" class=gallery-image data-flex-basis=216px data-flex-grow=90 height=502 loading=lazy sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src=/p/hugo-init/image.png width=453></p><p>这里的 <code>article-name.zh.md</code> 的中间的 zh 表示其为中文简体。这和 网站语言有关。当网站切换语言的时候，访客看到的就是不同的文章。比如在日语环境下，访客看到的就是 <code>article-anme.ja.md</code> 的内容。</p><h3 id=自定义>自定义</h3><p>你可以自定义项目的大部分内容。详细自定义内容见官方文档。这里主要说明几个比较复杂的自定义选项。</p><h4 id=评论功能>评论功能</h4><p>见 stack 主题文档。这里以utterances为例子，你在本地只需要增加一个如下的配置：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=p>[</span><span class=nx>comments</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>enabled</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>  <span class=nx>provider</span> <span class=p>=</span> <span class=s2>&#34;utterances&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><p>之后，你需要在你配置好的远程的github仓库中安装一个utterances，安装好后再根据你的需求配置 comments.utterances</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=c># 这里是远程仓库安装好后配置的。</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>comments</span><span class=p>.</span><span class=nx>utterances</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>repo</span> <span class=p>=</span> <span class=s2>&#34;yourAccount/yourRepo&#34;</span>  <span class=c># 尝试改为完整格式 &#34;用户名/仓库名&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>issueTerm</span> <span class=p>=</span> <span class=s2>&#34;pathname&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>label</span> <span class=p>=</span> <span class=s2>&#34;Comment&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=粒子背景>粒子背景</h4><p>你可以下载一些已经写好的内容到static文件中并使用。hugo在构建的时候会完整的保留static文件。</p><p>使用 git modules 功能下载 particles.js 到static文件</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>git</span> <span class=n>submodule</span> <span class=n>add</span> <span class=n>https</span><span class=err>:</span><span class=p>//</span><span class=n>github</span><span class=p>.</span><span class=n>com</span><span class=p>/</span><span class=n>VincentGarreau</span><span class=p>/</span><span class=n>particles</span><span class=p>.</span><span class=n>js</span><span class=p>/</span> <span class=n>static</span><span class=p>/</span><span class=n>particles</span><span class=p>.</span><span class=py>js</span>
+</span></span></code></pre></td></tr></table></div></div><p>然后使用它即可。</p><p>需要注意的是，由于 hugo 构建的时候默认是将static文件夹全部保留到 public 文件夹中，但是这里使用 git submodule 功能导致 particles 被标记为了一个 module模块。当你要上传public文件的时候，由于 public 的 git 仓库没有标记对应的子模块（particles 是作为源项目的模块，不是生成的博客项目的模块，这里在之后的部署和推送章节会讲到），因而在上传到 github上后会出现报错。</p><p>解决的方法有两个。</p><p>第一，配置hugo，可以配置 hugo 构建的时候的对于 static 的过滤模式，防止其中的 .git 和 .gitignore 等和git相关的文件被保留奥到成品即可。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=p>[[</span><span class=nx>module</span><span class=p>.</span><span class=nx>mounts</span><span class=p>]]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>source</span> <span class=p>=</span> <span class=s1>&#39;static&#39;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>target</span> <span class=p>=</span> <span class=s1>&#39;static&#39;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>excludeFiles</span> <span class=p>=</span> <span class=p>[</span><span class=s1>&#39;particles.js/.gitignore&#39;</span><span class=p>,</span> <span class=s1>&#39;particles.js/.git&#39;</span><span class=p>]</span>
+</span></span></code></pre></td></tr></table></div></div><p>第二，配置生成网页的仓库的 .gitignore（即在 public 文件夹下配置 .gitignore）。原理类似，不要让 网页博客项目的 git 追踪 原本属于 源文件的 git 文件即可。但是要注意，如果删掉public文件，其中的 git 配置也会被一并删掉。</p><p>不放心的话，两种方式都可以使用，互不干扰。</p><h2 id=本地自动推送更新>本地自动推送更新</h2><p>要将你生成的网页挂载到网路上，而不是你的本地，你需要先有一个 github 账号。</p><p>而后你需要建立两个仓库。一个是管理原文的仓库，一个是管理生成的网页文件的仓库。将对应的内容推送到对应的远程仓库。
+而后在网页仓库处配置 page 选项。具体配置方法可查找网络。在那之后你就可以在你的 github对应的仓库页面看到你的静态博客了。</p><h4 id=自动推送>自动推送</h4><p>网络上大部分人都是推荐在远程的源码仓库配置 GitHub Actions，这里介绍一个纯本地的方法，主要使用的是 git hooks 机制。</p><p>首先，在根目录创建一个自动化脚本，其负责在每次将代码提交到源码仓库的之前编译网页，并更新远程网页仓库的内容。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=c># deploy.ps1</span>
+</span></span><span class=line><span class=cl><span class=c># 功能：编译 Hugo 网站，并将 public 目录内容提交到远程仓库</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>Write-Host</span> <span class=s2>&#34;开始构建 Hugo 网站...&#34;</span> <span class=n>-ForegroundColor</span> <span class=n>Green</span>
+</span></span><span class=line><span class=cl><span class=n>hugo</span> <span class=p>-</span><span class=n>-minify</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=nv>$LASTEXITCODE</span> <span class=o>-ne</span> <span class=mf>0</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nb>Write-Host</span> <span class=s2>&#34;Hugo 构建失败！&#34;</span> <span class=n>-ForegroundColor</span> <span class=n>Red</span>
+</span></span><span class=line><span class=cl>    <span class=n>exit</span> <span class=mf>1</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>Write-Host</span> <span class=s2>&#34;Hugo 构建成功！&#34;</span> <span class=n>-ForegroundColor</span> <span class=n>Green</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># 进入 public 目录</span>
+</span></span><span class=line><span class=cl><span class=nb>Set-Location</span> <span class=n>public</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># 检查是否有文件变更</span>
+</span></span><span class=line><span class=cl><span class=nv>$status</span> <span class=p>=</span> <span class=n>git</span> <span class=n>status</span> <span class=p>-</span><span class=n>-porcelain</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=nv>$status</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nb>Write-Host</span> <span class=s2>&#34;检测到文件变更，准备提交...&#34;</span> <span class=n>-ForegroundColor</span> <span class=n>Yellow</span>
+</span></span><span class=line><span class=cl>    <span class=n>git</span> <span class=n>add</span> <span class=p>.</span>
+</span></span><span class=line><span class=cl>    <span class=nv>$date</span> <span class=p>=</span> <span class=nb>Get-Date</span> <span class=n>-Format</span> <span class=s2>&#34;yyyy-MM-dd HH:mm:ss&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=n>git</span> <span class=n>commit</span> <span class=n>-m</span> <span class=s2>&#34;Automated deploy: </span><span class=nv>$date</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=nb>Write-Host</span> <span class=s2>&#34;推送到远程仓库...&#34;</span> <span class=n>-ForegroundColor</span> <span class=n>Green</span>
+</span></span><span class=line><span class=cl>    <span class=n>git</span> <span class=n>push</span> <span class=n>origin</span> <span class=n>main</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=nb>Write-Host</span> <span class=s2>&#34;部署完成！&#34;</span> <span class=n>-ForegroundColor</span> <span class=n>Green</span>
+</span></span><span class=line><span class=cl><span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nb>Write-Host</span> <span class=s2>&#34;没有检测到文件变更，无需提交。&#34;</span> <span class=n>-ForegroundColor</span> <span class=n>Yellow</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># 返回项目根目录</span>
+</span></span><span class=line><span class=cl><span class=nb>Set-Location</span> <span class=p>..</span>
+</span></span></code></pre></td></tr></table></div></div><p>而后，进入根目录的 .git 文件夹，进入 hooks 文件夹，创建 pre-push 文件（不带后缀名），编辑以下内容：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=c>#!/bin/sh</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>echo </span><span class=s2>&#34;检测到 push 操作，开始自动部署...&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># 切换到项目根目录</span>
+</span></span><span class=line><span class=cl><span class=n>PROJECT_ROOT</span><span class=p>=</span><span class=s2>&#34;</span><span class=p>$(</span><span class=n>git</span> <span class=nb>rev-parse</span> <span class=p>-</span><span class=n>-show-toplevel</span><span class=p>)</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl><span class=nb>cd </span><span class=s2>&#34;</span><span class=nv>$PROJECT_ROOT</span><span class=s2>&#34;</span> <span class=p>||</span> <span class=n>exit</span> <span class=mf>1</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># 注意，这里使用的 power shell，Windows power shell 运行可能会报错</span>
+</span></span><span class=line><span class=cl><span class=n>pwsh</span><span class=p>.</span><span class=py>exe</span> <span class=n>-ExecutionPolicy</span> <span class=n>Bypass</span> <span class=n>-Command</span> <span class=s2>&#34;&amp; &#39;</span><span class=nv>$PROJECT_ROOT</span><span class=s2>/deploy.ps1&#39;&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># 如果部署失败，阻止 push</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=p>[</span> <span class=p>$?</span> <span class=o>-ne</span> <span class=mf>0</span> <span class=p>];</span> <span class=n>then</span>
+</span></span><span class=line><span class=cl>    <span class=nb>echo </span><span class=s2>&#34;部署失败，终止 push&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=n>exit</span> <span class=mf>1</span>
+</span></span><span class=line><span class=cl><span class=n>fi</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>echo </span><span class=s2>&#34;部署完成，继续执行 push&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>exit</span> <span class=mf>0</span>
+</span></span></code></pre></td></tr></table></div></div><p>这段代码会使得git 在每次 源文件项目提交远程仓库的时候检查并尝试运行上面写好的脚本。</p><blockquote><p>这里的网页仓库只有一条分支，多分支的情况请自行更改内容。</p></blockquote><p>这里配置好了之后，在你每次源码进行 push 操作的时候，git会为你自动提交最新的网页到网页仓库上。</p><hr><p>这样做可以避免去处理复杂的云端问题。尽管本地部署局限很多，包括但不限于比不上云端环境稳定，需要很多依赖，多设备情境下的脚本是否会出问题未知，以及更换设备的时候需要重新配置所有环境等等。但是由于我个人平时都是用电脑写作，而且也不频繁更换设备，这种本地自动化推送的方案对我而言就完全够用了。</p></section><footer class="article-meta article-footer"><section class=article-tags><a href=/tags/hugo/>Hugo</a></section><section class="article-copyright inline-meta"><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under <a class=link href=https://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank rel=noopener>CC BY-NC-SA 4.0</a></span></section></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css integrity=sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js integrity=sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js integrity=sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05 crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{const e=[".main-article",".widget--toc"];e.forEach(e=>{const t=document.querySelector(e);t&&renderMathInElement(t,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}],ignoredClasses:["gist"]})})})</script></article><aside><h2 class=section-title>Related content</h2><div class=subsection-list><div class=article-list--tile><article class=has-image><a href=/p/common-instruction/><div class=article-image><img alt="Featured image of post 常用 hugo-stack 主题的md指令" height=150 loading=lazy src=/p/common-instruction/helena-hertz-wWZzXlDpMog-unsplash_hu_e1104f1cd0b97b59.jpg srcset="/p/common-instruction/helena-hertz-wWZzXlDpMog-unsplash_hu_e1104f1cd0b97b59.jpg 1x, /p/common-instruction/helena-hertz-wWZzXlDpMog-unsplash_hu_b31a4c38c8668005.jpg 2x" width=250></div><div class=article-details style="background:linear-gradient(0deg,#4d554c80 0%,#edeeefC0 100%)"><h2 class=article-title>常用 hugo-stack 主题的md指令</h2></div></a></article><article><a href=/p/mermaid-diagrams/><div class=article-details><h2 class=article-title>Mermaid Diagrams</h2></div></a></article></div></div></aside><script src=https://utteranc.es/client.js repo=BackLight416491/BackLight416491.github.io issue-term=pathname label=Comment crossorigin=anonymous async></script><style>.utterances{max-width:unset}</style><script>let utterancesLoaded=!1;function setUtterancesTheme(e){let t=document.querySelector(".utterances iframe");t&&t.contentWindow.postMessage({type:"set-theme",theme:`github-${e}`},"https://utteranc.es")}addEventListener("message",e=>{if(e.origin!=="https://utteranc.es")return;utterancesLoaded=!0,setUtterancesTheme(document.documentElement.dataset.scheme)}),window.addEventListener("onColorSchemeChange",e=>{if(!utterancesLoaded)return;setUtterancesTheme(e.detail)})</script><footer class=site-footer><section class=copyright>&copy;
+2026 Backlight</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=4.0.3>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><script type=module>
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script></main></div><script type=text/javascript src=/ts/main.1ff1e5fdc4e178ed422e50aa407526dc552f26342d729343fded19416194382c.js defer></script></body></html>
